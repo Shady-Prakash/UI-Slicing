@@ -1,0 +1,22 @@
+@use '../abstracts/functions' as *;
+@use '../abstracts/variables' as *;
+
+input[type="text"], input[type="email"] {
+  position: relative;
+  padding: rem(10px) rem(12px);
+  border: $base-border-thickness solid color(gray, 60);
+  border-radius: $base-border-radius;
+
+  &::placeholder {
+    font-size: $text-sm;
+    font-family: "Skin";
+  }
+  &::after {
+    position: absolute;
+    top: 50%;
+    right: 12px;
+    height: inherit;
+    width: inherit;
+    content: "hello";
+  }
+}

@@ -1,0 +1,59 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/functions' as *;
+@use '../base/fonts' as *;
+
+header {
+  & .header__top {
+    background-color: color(gray, 20);
+    text-align: center;
+    padding: rem(10px) rem(0px);
+    & span {
+      color: color(secondary, base);
+      font-size: rem(14px);
+      line-height: 19.21px;
+
+      &::after {
+        content:"";
+        animation: spin 5s ease-in-out infinite;
+        transition: all 0.5s ease-in-out;
+
+        @keyframes spin {
+          0% { content:"Join the community"}
+          50% { content:"Something old, something new"}
+          100% { content: "Shop pre loved wedding dresses" }
+        }
+      }
+    }
+  }
+  & .header__mid {
+    padding: rem(11px) rem(15.68px);
+
+    & .input__wrapper {
+      position: relative;
+      max-width: rem(209px);
+
+      & svg {
+        position: absolute;
+        top: 50%;
+        right: 22%;
+        transform: translateY(-50%);
+      }
+    }
+
+    & .branding__logo {
+      text-align: center;
+    }
+
+    &--wrapper__right {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      gap: rem(25px);
+
+      & span {
+        font-size: rem(21.88px);
+        color: color(primary, base);
+      }
+    }
+  }
+}

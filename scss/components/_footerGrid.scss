@@ -1,0 +1,24 @@
+@use '../abstracts/functions' as *;
+@use '../abstracts/variables' as *;
+
+.footer__grid {
+  & h4 {
+    font-size: $text-md;
+    font-weight: $font-regular;
+    line-height: rem(19px);
+    text-transform: uppercase;
+    margin-bottom: rem(20px);
+  }
+  & ul {
+    display: flex;
+    flex-direction: column;
+    gap: rem(16px);
+     
+    & li {
+      & a {
+        font-size: $text-sm;
+        color: color(gray, 60);
+      }
+    }
+  }
+}

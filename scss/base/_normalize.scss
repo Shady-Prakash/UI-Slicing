@@ -1,0 +1,90 @@
+@use './fonts' as *; 
+@use '../abstracts/variables' as *;
+@use '../abstracts/functions' as *;
+
+svg:not(:root) {
+	overflow: unset;
+}
+html {
+	scroll-behavior: smooth;
+	text-rendering: optimizeLegibility;
+}
+body {
+	margin: 0;
+	font-weight: $font-regular;
+	font-size: 1rem;
+	font-family: 'Astralaga';
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+img,
+figure,
+figcaption,
+video,
+iframe,
+nav,
+ul,
+li,
+header,
+footer,
+article,
+main,
+aside {
+	margin: 0;
+	padding: 0;
+}
+
+h2 {
+	line-height: 54.88px;
+	font-family: 'Astralaga';
+	font-weight: $font-regular;
+}
+h5 {
+	line-height: 24.7px;
+	font-weight: $font-medium;
+	font-family: "Astralaga";
+}
+
+p {
+	font-family: 'Skin';
+}
+button,
+textarea,
+input {
+	&:focus {
+		outline: none;
+		box-shadow: none;
+		-webkit-box-shadow: none;
+	}
+}
+
+a,
+ul > li > a {
+	text-decoration: none;
+	color: unset;
+}
+img {
+	max-width: 100%;
+	vertical-align: middle;
+}
+ul {
+	list-style: none;
+}
+ul li {
+	display: inline-block;
+}
+
+.section {
+	margin-top: rem(110px);
+	padding: rem(70px) 0;
+	border-bottom: $base-border-thickness solid color(gray, 90);
+}
+
+.section__alt {
+	padding: rem(20px) 0 rem(70px);
+}

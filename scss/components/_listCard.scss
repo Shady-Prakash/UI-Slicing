@@ -1,0 +1,26 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/functions' as *;
+
+.list__card {
+  background-color: color(powder-blue, null);
+  display: flex;
+  align-items: center;
+  padding: rem(20px) rem(90px) rem(20px) rem(30px);
+  border-radius: $base-border-radius;
+  gap: rem(20px);
+
+  &--content {
+    & h5 {
+      margin-bottom: rem(8px);
+    }
+    & p {
+      font-size: $text-sm;
+      color: color(gray, 60);
+      line-height: rem(20px);
+    }
+  }
+
+  &:not(:last-child) {
+    margin-bottom: rem(20px);
+  }
+}

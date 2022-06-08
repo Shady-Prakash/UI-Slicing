@@ -1,0 +1,31 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/functions' as *;
+
+.tab {
+  max-width: rem(212px);
+  padding: rem(20px) rem(82px) rem(41px) 0;
+  & button {
+    display: block;
+    color: color(gray, 40);
+    padding: rem(5px) rem(20px);
+    width: 100%;
+    border: none;
+    outline: none;
+    text-align: left;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: $text-sm;
+    background-color: transparent;
+    line-height: rem(21px);
+    font-family: "Skin";
+
+    &:not(:last-child) {
+      margin-bottom: rem(20px);
+    }
+
+    &.active {
+      border-left: $base-border-thickness solid color(primary, base);
+      color: color(gray, 10);
+    }
+  }
+}

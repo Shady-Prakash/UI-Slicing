@@ -1,0 +1,58 @@
+@use '../abstracts/functions' as *;
+@use '../abstracts/variables' as *;
+
+.hero__banner {
+  position: relative;
+  background-image: url('../../assets/images/Rectangle\ 13.svg');
+  min-height: calc(100vh - 42px - 86px - 52px);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &--content {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    max-width: rem(627px);
+    text-transform: uppercase;
+    color: color(secondary, base);
+
+    & h2 {
+      margin-bottom: rem(30px);
+    }
+    & p {
+      font-family: "Florencesans";
+      font-weight: $font-regular;
+      letter-spacing: 0.1em;
+      line-height: 24px;
+      color: color(gray, 97);
+      padding-right: rem(69px);
+      &:nth-child(2) {
+        margin-bottom: rem(15px);
+      }
+      &:nth-child(3) {
+       font-size: $text-sm;
+       letter-spacing: 0.05em;
+
+       & span {
+         font-family: "Baxter";
+         font-size: $text-lg;
+       }
+      }
+    }
+    & .button__group {
+      margin-top: rem(60px);
+
+      & a {
+        span {
+          display: inline-block;
+          width: rem(110px);
+          line-height: 21px;
+        }
+        &:first-child {
+          margin-right: rem(30px);
+        }
+      }
+    }
+  }
+}

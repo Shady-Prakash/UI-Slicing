@@ -1,0 +1,22 @@
+@use '../abstracts/functions' as *;
+@use '../abstracts/variables' as *;
+
+.section__works {
+  & .section__wrapper {
+    justify-content: unset;
+    gap: rem(145px);
+
+    &--left {
+      padding: rem(36.5px) rem(78px) rem(36.5px) 0;
+      border-right: $base-border-thickness solid color(gray, 90);
+      flex-shrink: 0;
+    }
+    &--right {
+      flex-grow: 1;
+
+      & .tabcontent {
+        flex: 1;
+      }
+    }
+  }
+}

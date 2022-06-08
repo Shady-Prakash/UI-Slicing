@@ -1,0 +1,111 @@
+@use '../abstracts/functions' as *;
+@use '../abstracts/variables' as *;
+
+.section__subscription {
+  padding: rem(41px) 0;
+  background-color: color(cashmere, null);
+
+  & .subscription__wrapper {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      grid-gap: rem(405px);
+
+    &--left {
+      max-width: rem(398px);
+      h5 {
+          font-size: rem(20px);
+          line-height: rem(27px);
+          color: color(gray, 10);
+      }
+      p {
+          margin: rem(15px) 0 rem(25px);
+          font-weight: $font-regular;
+          font-size: $text-sm;
+          line-height: rem(20px);
+          color: color(gray, 50);
+      }
+      & .email__subscription {
+        margin-bottom: rem(25px);
+        & form {
+          display: flex;
+          position: relative;
+
+          & input[type="email"] {
+            width: 100%;
+            padding: rem(14.5px) rem(10px);
+            border-right: 0;
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+          }
+
+          & input[type="submit"] {
+            padding: rem(12px) rem(15px);
+            background-color: color(gray, 60);
+            border-width: 0;
+            border-top-right-radius: $base-border-thickness;
+            border-bottom-right-radius: $base-border-thickness;
+            cursor: pointer;
+            width: rem(48px);
+          }
+          & svg {
+            position: absolute;
+            top: 50%;
+            right: 4%;
+            transform: translateY(-50%);
+          }
+        }
+      }
+
+      & .social__icons {
+        & a:not(:last-child) {
+          margin-right: rem(20px);
+        }
+      }
+    }
+
+    &--right {
+      & .block__content {
+        &:not(:last-child) {
+          margin-bottom: rem(30px);
+        }
+        & span {
+          font-size: $text-md;
+          font-weight: $font-regular;
+          line-height: rem(19px);
+          font-family: "Skin";
+          color: color(gray, 20);
+          text-transform: uppercase;
+        }
+        & ul {
+          margin-top: rem(10px);
+          & li {
+            font-size: $text-sm;
+            font-family: "Skin";
+            font-weight: $font-regular;
+            color: color(gray, 60);
+            line-height: rem(14px);
+            position: relative;
+            vertical-align: middle;
+
+            &:not(:last-child) {
+              margin-right: rem(26px);
+
+              &::after {
+                position: absolute;
+                content: '';
+                width: rem(9px);
+                height: rem(9px);
+                background-color: color(gray, 80);
+                border-radius: 50%;
+                right: -18px;
+                top: 50%;
+                transform: translateY(-50%);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

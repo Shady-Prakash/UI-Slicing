@@ -1,0 +1,65 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/functions' as *;
+
+.product__card {
+  padding: rem(5px) rem(5.5px) rem(10px);
+  transition: all 0.5s ease-in-out;
+  & figure {
+    margin-bottom: rem(14px);
+  }
+  & article {
+    padding: 0 rem(5px);
+    & header {
+      font-weight: $font-medium;
+      font-size: $text-xs;
+      line-height: rem(19.21px);
+      color: color(primary, base);
+      margin-bottom: rem(12px);
+    }
+    & .product__size {
+      & span{
+        font-size: rem(12px);
+        font-family: "Skin";
+        line-height: rem(12px);
+        text-transform: uppercase;
+        color: color(gray, 30);
+        &:first-child {
+          color: color(gray, 70);
+          margin-right: rem(5px);
+        }
+      }
+    }
+    & footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+
+      & .product__price {
+        & span {
+          font-size: rem(12px);
+          font-family: "Skin";
+          line-height: rem(12px);
+          color: color(gray, 70);
+          &:first-child {
+            font-size: $text-sm;
+            color: color(primary, french-rouge);
+            margin-right: rem(10px);
+          }
+          &:last-child {
+            text-decoration: line-through;
+          }
+        }
+      }
+
+      & .product__author {
+        height: rem(36px);
+        width: rem(36px);
+        border-radius: 50%;
+        border: $base-border-thickness solid color(gray, 70);
+      }
+    }
+  }
+  &:hover {
+    box-shadow: $base-box-shadow;
+  }
+}

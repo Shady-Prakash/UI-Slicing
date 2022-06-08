@@ -1,0 +1,65 @@
+@use '../abstracts/functions' as *;
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.section__blog {
+    padding: rem(20px) 0;
+    border-bottom: unset;
+  & .header__title {
+    max-width: unset;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &--list {
+    display: grid;
+    grid-template-columns: 4fr 1fr 1fr;
+
+    & a {
+      display: flex;
+      overflow: hidden;
+    
+      & img {
+        flex-grow: 1;
+        @include transistion;
+
+        &:hover {
+          transform: scale(1.2);
+        }
+      }
+    }
+  }
+
+  & .footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: rem(50px);
+
+    &__left {
+      & h4 {
+        font-size: rem(48px);
+        font-weight: $font-regular;
+        line-height: rem(65.86px);
+        margin-bottom: 5px;
+      }
+      & h6 {
+        font-size: rem(32px);
+        font-weight: $font-lighter;
+        line-height: rem(43.9px);
+        color: color(gray, 30);
+      }
+    }
+
+    &__right {
+      max-width: rem(568px);
+
+      & p {
+        font-size: $text-lg;
+        font-weight: $font-regular;
+        line-height: rem(27px);
+        color: color(gray, 30);
+        margin-bottom: rem(26px);
+      }
+    }
+  }
+}

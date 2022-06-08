@@ -1,0 +1,20 @@
+@use '../abstracts/functions' as *;
+
+.section {
+  &__wrapper {
+    display: flex;
+    align-items: center;
+   justify-content: space-between;
+
+   &--left {
+     & .button__wrapper {
+       margin-top: rem(50px);
+     }
+   }
+
+    &--right {
+      display: flex;
+      gap: rem(30px);
+    }
+  }
+}

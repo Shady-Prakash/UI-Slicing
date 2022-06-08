@@ -1,0 +1,39 @@
+@use '../abstracts/functions' as *;
+@use '../abstracts/variables' as *;
+
+.info__card {
+  padding: rem(20px) rem(58px) rem(52px);
+  border: $base-border-thickness solid color(gray, 90);
+  text-align: center;
+  border-radius: $base-border-radius;
+  box-shadow: $base-box-shadow;
+  transition: all 0.3s ease-in-out;
+
+  &--icon {
+    height: rem(76px);
+    width: rem(76px);
+    margin: 0 auto;
+    background-color: color(powder-blue, null) ;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  & header {
+    font-size: rem(22px);
+    font-weight: $font-medium;
+    margin-bottom: rem(10px);
+    margin-top: rem(20px);
+    line-height: rem(30.18px);
+  }
+  & p {
+    font-family: "Skin";
+    font-size: $text-sm;
+    line-height: rem(20.5px);
+    color: color(gray, 60);
+  }
+
+  &:hover {
+    background-color: color(powder-blue, null);
+  }
+}

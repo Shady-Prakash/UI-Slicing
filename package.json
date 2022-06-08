@@ -1,0 +1,15 @@
+{
+	"name": "y",
+	"version": "1.0.0",
+	"description": "Style guide for developer",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"compile:sass": "sass --watch scss/index.scss:assets/css/index.css"
+	},
+	"author": "Prakash Mahat",
+	"license": "ISC",
+	"dependencies": {
+		"sass": "^1.52.2"
+	}
+}

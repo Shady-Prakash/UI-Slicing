@@ -1,0 +1,73 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/functions' as *;
+
+@mixin btn($bg-color:null) {
+  text-decoration: none;
+  cursor: pointer;
+  display: inline-block;
+  border: 0;
+  padding: $spacer $spacer * 2;
+  border-radius: $base-border-radius;
+  background-color: $bg-color;
+  font-size: $text-sm;
+  font-weight: $font-regular;
+  font-family: "Skin";
+  text-align: center;
+  padding: rem(12px) rem(20px);
+
+}
+
+.btn {
+  @include btn;
+
+  &__primary {
+    background-color: color(primary,base);
+    color: color(secondary, base);
+
+    &--sm {
+      padding: rem(7px) rem(9.5px);
+    }
+
+    &--outline {
+      border: $base-border-thickness solid color(secondary, base);
+    }
+
+  }
+  &__secondary {
+    background-color: color(secondary, base);
+    color: color(primary, base);
+  }
+}
+
+.btn__link {
+  position: relative;
+  font-family: "Skin";
+  font-size: $text-sm;
+  line-height: rem(21px);
+  text-transform: uppercase;
+  border-radius: $base-border-radius;
+  display: inline-flex;
+  padding: rem(12px) 0;
+  align-items: center;
+  gap: rem(5px);
+  border: $base-border-thickness solid transparent;
+  transition: all 0.5s ease-in-out;
+
+  &:hover {
+    padding: rem(12px) rem(20px); 
+    border: $base-border-thickness solid color(primary, base);
+  }
+
+  &--underline {
+    border-bottom: $base-border-thickness solid color(primary, base);
+  }
+}
+
+.cta__link {
+  font-size: $text-lg;
+  font-family: "Skin";
+  font-weight: $font-regular;
+  line-height: rem(27px);
+  color: color(primary, base);
+  border-bottom: $base-border-thickness solid color(primary, base);
+}

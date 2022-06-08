@@ -1,0 +1,26 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/functions' as *;
+
+.header__title {
+  max-width: rem(324px);
+
+  & .count {
+    margin-bottom: rem(15px);
+
+    & span {
+      font-family: "Skin";
+      color: color(gray, 40);
+      text-transform: uppercase;
+    }
+  }
+  & h2 {
+    margin-bottom: rem(20px);
+    text-transform: uppercase;
+  }
+  & p {
+    color: color(gray, 40);
+    font-family: "Skin";
+    line-height: rem(24px);
+    padding-right: rem(38px);
+  }
+}

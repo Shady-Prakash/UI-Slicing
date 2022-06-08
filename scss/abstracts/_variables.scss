@@ -1,0 +1,64 @@
+// spacing
+$spacer: 1rem;
+
+// borders
+$base-border-thickness: 1px;
+$base-border-radius: 3px;
+
+// box-shadow
+$base-box-shadow:  0px 5px 20px rgba(0, 0, 0, 0.05);;
+
+// font weights
+$font-lighter: 300 !default;
+$font-regular: 400 !default;
+$font-medium: 500 !default;
+$font-semi-bold: 600 !default;
+$font-bold: 700 !default;
+
+// font sizes
+$base-font-size: 1rem !default;
+$text-xs : $base-font-size * 0.875 !default;
+$text-sm: $base-font-size * 0.9375 !default;
+$text-md: $base-font-size * 1 !default;
+$text-lg: $base-font-size * 1.125 !default;
+
+// Heading sizes
+$h2: $base-font-size * 2.5 !default;
+$h5: $base-font-size * 1.125 !default;
+
+// color variable map
+$colors: (
+	primary:
+		(
+			base: #000000,
+			french-rouge: #B23028,
+		),
+	secondary: (
+		base: #FFFFFF,
+	),
+	gray: (
+		10: #1A1A1A,
+		20: #333333,
+		30: #4D4D4D,
+		40: #666666,
+    50: #808080,
+    60: #999999,
+    70: #B3B3B3,
+		80: #CCCCCC,
+		90: #E6E6E6,
+		97: #FAFAFA
+	),
+	powder-blue: #F7F9FD,
+	cashmere: #F8F6EE,
+);
+
+// retrieve color from $colors map ie. `color(base, primary)`
+@function color($color-name, $color-variant: null) {
+	// color variant is optional
+	@if ($color-variant != null) {
+		// map inception
+		@return map-get(map-get($colors, $color-name), $color-variant);
+	} @else {
+		@return map-get($colors, $color-name);
+	}
+}

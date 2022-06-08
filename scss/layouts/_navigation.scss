@@ -1,0 +1,27 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/functions' as *;
+
+nav {
+  display: flex;
+  justify-content: center;
+  padding: rem(15px) rem(0px) rem(3px);
+  background: color(primary, base);
+
+  & ul {
+     & li {
+        padding-bottom: rem(10px);
+        &.active{
+          border-bottom: 2px solid color(secondary, base);
+        }
+       &:not(:last-child) {
+         margin-right: rem(50px);
+       }
+      & a {
+        color: color(secondary, base);
+        font-family: "Skin";
+        font-size: $text-sm;
+        line-height: 14px;
+      }
+     }
+  }
+}
